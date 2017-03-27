@@ -406,7 +406,7 @@
                 <div class="container sm-text-center pt-30 pb-30">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h2 class="booknow-header">Book with us today</h2>
+                            <h2 class="booknow-header"><?php echo get_option('homepage_call_to_action');?></h2>
                         </div>
                     </div>
                 </div>

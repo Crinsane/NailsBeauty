@@ -10,6 +10,7 @@ add_action('admin_menu', function () {
             <form method="post" action="options.php">
                 <?php
                 settings_fields('section');
+                settings_fields('homepage');
                 do_settings_sections('theme-options');
                 submit_button();
                 ?>
@@ -21,33 +22,34 @@ add_action('admin_menu', function () {
 
 add_action('admin_init', function () {
     add_settings_section('section', 'All Settings', null, 'theme-options');
+    add_settings_section('homepage', 'Homepage Settings', null, 'theme-options');
 
     add_settings_field('facebook_url', 'Facebook', function () {
-        ?><input type="text" name="facebook_url" id="facebook_url" class="regular-text" value="<?php echo get_option('facebook_url');?>" /><?php
+        ?><input type="text" name="facebook_url" id="facebook_url" class="regular-text" value="<?php echo esc_attr(get_option('facebook_url'));?>" /><?php
     }, 'theme-options', 'section');
 
     add_settings_field('twitter_url', 'Twitter', function () {
-        ?><input type="text" name="twitter_url" id="twitter_url" class="regular-text" value="<?php echo get_option('twitter_url');?>" /> <?php
+        ?><input type="text" name="twitter_url" id="twitter_url" class="regular-text" value="<?php echo esc_attr(get_option('twitter_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     add_settings_field('youtube_url', 'YouTube', function () {
-        ?><input type="text" name="youtube_url" id="youtube_url" class="regular-text" value="<?php echo get_option('youtube_url');?>" /> <?php
+        ?><input type="text" name="youtube_url" id="youtube_url" class="regular-text" value="<?php echo esc_attr(get_option('youtube_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     add_settings_field('linkedin_url', 'LinkedIn', function () {
-        ?><input type="text" name="linkedin_url" id="linkedin_url" class="regular-text" value="<?php echo get_option('linkedin_url');?>" /> <?php
+        ?><input type="text" name="linkedin_url" id="linkedin_url" class="regular-text" value="<?php echo esc_attr(get_option('linkedin_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     add_settings_field('google_url', 'Google+', function () {
-        ?><input type="text" name="google_url" id="google_url" class="regular-text" value="<?php echo get_option('google_url');?>" /> <?php
+        ?><input type="text" name="google_url" id="google_url" class="regular-text" value="<?php echo esc_attr(get_option('google_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     add_settings_field('pinterest_url', 'Pinterest', function () {
-        ?><input type="text" name="pinterest_url" id="pinterest_url" class="regular-text" value="<?php echo get_option('pinterest_url');?>" /> <?php
+        ?><input type="text" name="pinterest_url" id="pinterest_url" class="regular-text" value="<?php echo esc_attr(get_option('pinterest_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     add_settings_field('instagram_url', 'Instagram', function () {
-        ?><input type="text" name="instagram_url" id="instagram_url" class="regular-text" value="<?php echo get_option('instagram_url');?>" /> <?php
+        ?><input type="text" name="instagram_url" id="instagram_url" class="regular-text" value="<?php echo esc_attr(get_option('instagram_url'));?>" /> <?php
     }, 'theme-options', 'section');
 
     register_setting('section', 'facebook_url');
@@ -58,14 +60,19 @@ add_action('admin_init', function () {
     register_setting('section', 'pinterest_url');
     register_setting('section', 'instagram_url');
 
-    add_settings_field('homepage_contact_form', 'Shortcode contact formulier homepage', function () {
+    add_settings_field('homepage_call_to_action', 'Call-to-action tekst', function () {
+        ?><input type="text" name="homepage_call_to_action" id="homepage_call_to_action" class="regular-text" value="<?php echo esc_attr(get_option('homepage_call_to_action'));?>" /> <?php
+    }, 'theme-options', 'homepage');
+
+    add_settings_field('homepage_contact_form', 'Shortcode contact formulier', function () {
         ?><input type="text" name="homepage_contact_form" id="homepage_contact_form" class="regular-text" value="<?php echo esc_attr(get_option('homepage_contact_form'));?>" /> <?php
-    }, 'theme-options', 'section');
+    }, 'theme-options', 'homepage');
 
-    add_settings_field('homepage_google_maps', 'Shortcode Google maps homepage', function () {
+    add_settings_field('homepage_google_maps', 'Shortcode Google maps', function () {
         ?><input type="text" name="homepage_google_maps" id="homepage_google_maps" class="regular-text" value="<?php echo esc_attr(get_option('homepage_google_maps'));?>" /> <?php
-    }, 'theme-options', 'section');
+    }, 'theme-options', 'homepage');
 
-    register_setting('section', 'homepage_contact_form');
-    register_setting('section', 'homepage_google_maps');
+    register_setting('homepage', 'homepage_call_to_action');
+    register_setting('homepage', 'homepage_contact_form');
+    register_setting('homepage', 'homepage_google_maps');
 });
