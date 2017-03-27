@@ -407,16 +407,13 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <h2 class="booknow-header">Book with us today</h2>
-                            <a class="btn btn-colored btn-true-black btn-light-blue-hover hvr-shutter-out-horizontal mt-20"
-                               href="page-booknow.html" data-border="medium none transparent" data-mouseover-color="#fff"
-                               data-mouseout-color="#fff">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Section Contact Us -->
-            <section id="location" class="img-absolute-parent overflow-visible">
+            <section id="location" class="img-absolute-parent overflow-visible pt-30">
                 <div class="section-title">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3 text-center">
@@ -431,11 +428,12 @@
                              src="<?php echo trailingslashit(get_template_directory_uri());?>images/contact-image-bg.png">
                         <div class="row" style="padding: 20px; box-shadow: 0px 0px 6px 3px rgba(199,199,199,1);">
                             <div class="col-sm-12 col-md-6 p-0">
-                                <div class="contact-wrapper pr-20 pl-20 pb-50 pt-10">
+                                <div class="contact-wrapper pr-20 pl-20 pb-10 pt-10">
                                     <?php echo do_shortcode(get_option('homepage_contact_form'));?>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6 bg12 bg-img-center bg-img-cover p-0">
+                                <?php echo do_shortcode(get_option('homepage_google_maps'));?>
                                 <div data-popupstring-id="#popupstring2" class="map-canvas autoload-map"
                                      data-mapstyle="style2" data-height="400" data-address="350 5th Ave, New York, NY 10118"
                                      data-latlng="40.7484405,-73.9878531" data-title="sample title" data-zoom="12"
