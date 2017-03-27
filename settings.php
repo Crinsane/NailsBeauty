@@ -57,4 +57,11 @@ add_action('admin_init', function () {
     register_setting('section', 'google_url');
     register_setting('section', 'pinterest_url');
     register_setting('section', 'instagram_url');
+
+
+    add_settings_field('homepage_contact_form', 'Shortcode contact formulier homepage', function () {
+        ?><input type="text" name="homepage_contact_form" id="homepage_contact_form" value="<?php echo get_option('homepage_contact_form');?>" /> <?php
+    }, 'theme-options', 'section');
+
+    register_setting('section', 'homepage_contact_form');
 });

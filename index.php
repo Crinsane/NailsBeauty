@@ -292,50 +292,69 @@
                     </div>
                     <div class="section-content">
                         <div class="row">
-                            <div class="col-md-6 text-center p-0">
-                                <div class="services-items overlay-lightblue divider">
-                                    <div class="p-30 pl-40 pr-40">
-                                        <h4><a href="#" class="service-title">Pedicure</a></h4>
-                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>
-                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ
-                                            MORE</a>
+                            <?php
+                                $servicesQuery = new WP_Query(['post_type' => 'services']);
+
+                                if ($servicesQuery->have_posts()) : while ($servicesQuery->have_posts()) : $servicesQuery->the_post();
+                            ?>
+                                <div class="col-md-6 text-center p-0">
+                                    <?php $boxColor = get_post_meta(get_the_ID(), '_box_color', true);?>
+                                    <div class="services-items overlay-<?php echo $boxColor;?> divider">
+                                        <div class="p-30 pl-40 pr-40">
+                                            <h4><a href="#" class="service-title"><?php the_title();?></a></h4>
+                                            <p class="text-black"><?php the_content();?></p>
+                                            <a href="<?php the_permalink();?>" class="btn btn-colored btn-text-black-hover-blue">READ MORE</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 text-center p-0">
-                                <div class="services-items overlay-lightgray divider">
-                                    <div class="p-30 pl-40 pr-40">
-                                        <h4><a href="#" class="service-title">Nail Repair</a></h4>
-                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>
-                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ
-                                            MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-center p-0">
-                                <div class="services-items overlay-lightgray divider mobile-border">
-                                    <div class="p-30 pl-40 pr-40">
-                                        <h4><a href="#" class="service-title">Nail Art</a></h4>
-                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>
-                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ
-                                            MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 text-center p-0">
-                                <div class="services-items overlay-lightblue divider">
-                                    <div class="p-30 pl-40 pr-40">
-                                        <h4><a href="#" class="service-title">Toe Nail Polish</a></h4>
-                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>
-                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ
-                                            MORE</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                endwhile; endif;
+                            wp_reset_postdata();
+                            ?>
+<!--                            <div class="col-md-6 text-center p-0">-->
+<!--                                <div class="services-items overlay-lightblue divider">-->
+<!--                                    <div class="p-30 pl-40 pr-40">-->
+<!--                                        <h4><a href="#" class="service-title">Pedicure</a></h4>-->
+<!--                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>-->
+<!--                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ-->
+<!--                                            MORE</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 text-center p-0">-->
+<!--                                <div class="services-items overlay-lightgray divider">-->
+<!--                                    <div class="p-30 pl-40 pr-40">-->
+<!--                                        <h4><a href="#" class="service-title">Nail Repair</a></h4>-->
+<!--                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>-->
+<!--                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ-->
+<!--                                            MORE</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 text-center p-0">-->
+<!--                                <div class="services-items overlay-lightgray divider mobile-border">-->
+<!--                                    <div class="p-30 pl-40 pr-40">-->
+<!--                                        <h4><a href="#" class="service-title">Nail Art</a></h4>-->
+<!--                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>-->
+<!--                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ-->
+<!--                                            MORE</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 text-center p-0">-->
+<!--                                <div class="services-items overlay-lightblue divider">-->
+<!--                                    <div class="p-30 pl-40 pr-40">-->
+<!--                                        <h4><a href="#" class="service-title">Toe Nail Polish</a></h4>-->
+<!--                                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--                                            Quos, corrupti ipsa. Dolore minima quod sunt eveniet.</p>-->
+<!--                                        <a href="javascript:void(0)" class="btn btn-colored btn-text-black-hover-blue">READ-->
+<!--                                            MORE</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -558,34 +577,7 @@
                         <div class="row" style="padding: 20px; box-shadow: 0px 0px 6px 3px rgba(199,199,199,1);">
                             <div class="col-sm-12 col-md-6 p-0">
                                 <div class="contact-wrapper pr-20 pl-20 pb-50 pt-10">
-                                    <?php echo do_shortcode('[contact-form-7 id="5" title="Contactformulier 1"]');?>
-<!--                                    <form id="contact-form">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <input type="text" placeholder="Enter Name" id="contact_name"-->
-<!--                                                   name="contact_name" class="form-control" required>-->
-<!--                                        </div>-->
-<!--                                        <div class="form-group">-->
-<!--                                            <input type="text" placeholder="Enter Email" id="contact_email"-->
-<!--                                                   name="contact_email" class="form-control" required>-->
-<!--                                        </div>-->
-<!--                                        <div class="form-group">-->
-<!--                                            <input type="text" id="contact_subject" name="contact_subject"-->
-<!--                                                   class="form-control" placeholder="Subject" required>-->
-<!--                                        </div>-->
-<!--                                        <div class="form-group">-->
-<!--                                            <textarea rows="5" placeholder="Enter Message" id="contact_message"-->
-<!--                                                      name="contact_message" class="form-control" required></textarea>-->
-<!--                                        </div>-->
-<!--                                        <div class="form-group">-->
-<!--                                            <button data-loading-text="Please wait..."-->
-<!--                                                    class="btn btn-colored no-border hvr-shutter-out-horizontal btn-blue btn-black-hover pl-30 pr-30 font-Oswald"-->
-<!--                                                    type="submit">SEND YOUR MESSAGE-->
-<!--                                            </button>-->
-<!--                                            <button class="btn btn-colored btn-white-border-black btn-light-blue-hover hvr-shutter-out-horizontal no-bg border-1px font-Oswald"-->
-<!--                                                    type="reset" data-border="1px solid #CDCDCD">RESET-->
-<!--                                            </button>-->
-<!--                                        </div>-->
-<!--                                    </form>-->
+                                    <?php echo do_shortcode(get_option('homepage_contact_form'));?>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6 bg12 bg-img-center bg-img-cover p-0">
