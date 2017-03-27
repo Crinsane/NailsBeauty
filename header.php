@@ -31,45 +31,7 @@
                     <nav>
                         <div id="menuzord" class="menuzord no-bg">
                             <a class="menuzord-brand" href="index.html"><img src="<?php echo trailingslashit(get_template_directory_uri());?>images/logo-wide.png" alt=""></a>
-                            <ul class="pull-right hidden-sm hidden-xs ml-30">
-                                <li>
-                                    <a class="btn btn-colored btn-orange mt-20 p-10 pl-20 pr-20 text-white"
-                                       data-bg-color="rgba(1, 203, 217, 0.95)" href="page-booknow.html">BOOKING NOW</a>
-                                </li>
-                            </ul>
                             <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'menuzord-menu pull-right']);?>
-<!--                            <ul class="menuzord-menu pull-right">-->
-<!--                                <li><a href="index.html">Home</a></li>-->
-<!--                                <li><a href="javascript:void(0)">Pages</a>-->
-<!--                                    <ul class="dropdown">-->
-<!--                                        <li><a href="page-about.html">About</a></li>-->
-<!--                                        <li><a href="page-services.html">Services</a></li>-->
-<!--                                        <li><a href="shortcodes.html">Shortcodes</a></li>-->
-<!--                                        <li><a href="page-404.html">404</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                                <li><a href="javascript:void(0)">Our Staff</a>-->
-<!--                                    <ul class="dropdown">-->
-<!--                                        <li><a href="staff.html">Our Staff</a></li>-->
-<!--                                        <li><a href="staff-details.html">Staff Details</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                                <li><a href="javascript:void(0)">Gallery</a>-->
-<!--                                    <ul class="dropdown">-->
-<!--                                        <li><a href="page-gallery-2-column.html">2 Column</a></li>-->
-<!--                                        <li><a href="page-gallery-3-column.html">3 Column</a></li>-->
-<!--                                        <li><a href="page-gallery-4-column.html">4 Column</a></li>-->
-<!--                                        <li><a href="page-gallery-tiles.html">Titles</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                                <li><a href="javascript:void(0)">Blog</a>-->
-<!--                                    <ul class="dropdown">-->
-<!--                                        <li><a href="blog-2-column.html">Blog</a></li>-->
-<!--                                        <li><a href="blog-details.html">Blog Details</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                                <li><a href="page-contact.html">Contact</a></li>-->
-<!--                            </ul>-->
                         </div>
                     </nav>
                 </div>

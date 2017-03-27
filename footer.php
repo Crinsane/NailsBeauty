@@ -12,7 +12,7 @@
                 <div class="col-md-6">
                     <ul class="social-icons list-inline mt-20 mp-20 text-left">
                         <li>
-                            <p class="footer-content text-center letter-space-2 text-left">&copy; <?php bloginfo('name');?>All Rights Reserved</p>
+                            <p class="footer-content text-center letter-space-2 text-left">&copy; <?php bloginfo('name');?> - All Rights Reserved</p>
                         </li>
                     </ul>
                 </div>
