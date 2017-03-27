@@ -434,16 +434,6 @@
                             </div>
                             <div class="col-sm-12 col-md-6 bg12 bg-img-center bg-img-cover p-0">
                                 <?php echo do_shortcode(get_option('homepage_google_maps'));?>
-                                <div data-popupstring-id="#popupstring2" class="map-canvas autoload-map"
-                                     data-mapstyle="style2" data-height="400" data-address="350 5th Ave, New York, NY 10118"
-                                     data-latlng="40.7484405,-73.9878531" data-title="sample title" data-zoom="12"
-                                     data-marker="<?php echo trailingslashit(get_template_directory_uri());?>images/map-icon-blue.png"></div>
-                                <div class="map-popupstring hidden" id="popupstring2">
-                                    <div class="text-center">
-                                        <h3>Nails Beauty</h3>
-                                        <p>350 5th Ave, New York, NY 10118</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
