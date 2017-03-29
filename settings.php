@@ -72,7 +72,12 @@ add_action('admin_init', function () {
         ?><input type="text" name="homepage_google_maps" id="homepage_google_maps" class="regular-text" value="<?php echo esc_attr(get_option('homepage_google_maps'));?>" /> <?php
     }, 'theme-options', 'homepage');
 
+    add_settings_field('homepage_mailchimp_form', 'Shortcode Mailchimp', function () {
+        ?><input type="text" name="homepage_mailchimp_form" id="homepage_mailchimp_form" class="regular-text" value="<?php echo esc_attr(get_option('homepage_mailchimp_form'));?>" /> <?php
+    }, 'theme-options', 'homepage');
+
     register_setting('homepage', 'homepage_call_to_action');
     register_setting('homepage', 'homepage_contact_form');
     register_setting('homepage', 'homepage_google_maps');
+    register_setting('homepage', 'homepage_mailchimp_form');
 });

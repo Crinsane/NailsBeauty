@@ -5,7 +5,7 @@
         <div class="section-content">
             <div class="row pt-10">
                 <div class="col-md-10 col-md-offset-1">
-                    <?php echo do_shortcode('[mc4wp_form id="44"]');?>
+                    <?php echo do_shortcode(get_option('homepage_mailchimp_form'));?>
                 </div>
             </div>
         </div>
