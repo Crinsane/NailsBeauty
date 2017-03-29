@@ -83,6 +83,14 @@ add_action('admin_init', function () {
     register_setting('section', 'homepage_google_maps');
     register_setting('section', 'homepage_mailchimp_form');
 
+    add_settings_field('section_about_title', 'About section title', function () {
+        ?><input type="text" name="section_about_title" id="section_about_title" class="regular-text" value="<?php echo esc_attr(get_option('section_about_title'));?>" /> <?php
+    }, 'theme-options', 'section');
+
+    add_settings_field('section_about_subtitle', 'About section subtitle', function () {
+        ?><input type="text" name="section_about_subtitle" id="section_about_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_about_subtitle'));?>" /> <?php
+    }, 'theme-options', 'section');
+
     add_settings_field('section_services_title', 'Services section title', function () {
         ?><input type="text" name="section_services_title" id="section_services_title" class="regular-text" value="<?php echo esc_attr(get_option('section_services_title'));?>" /> <?php
     }, 'theme-options', 'section');
@@ -107,6 +115,8 @@ add_action('admin_init', function () {
         ?><input type="text" name="section_contact_subtitle" id="section_contact_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_contact_subtitle'));?>" /> <?php
     }, 'theme-options', 'section');
 
+    register_setting('section', 'section_about_title');
+    register_setting('section', 'section_about_subtitle');
     register_setting('section', 'section_services_title');
     register_setting('section', 'section_services_subtitle');
     register_setting('section', 'section_portfolio_title');
