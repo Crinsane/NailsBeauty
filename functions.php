@@ -93,3 +93,7 @@ add_filter('image_send_to_editor', 'remove_width_attribute', 10);
 function remove_width_attribute($html) {
     return preg_replace('/(width|height)="\d*"\s/', '', $html);
 }
+
+add_filter('the_content_more_link', function () {
+    return '<a href="' . get_permalink() . '" class="btn btn-colored btn-text-black-hover-blue">LEES MEER</a>';
+});
