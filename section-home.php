@@ -11,11 +11,11 @@
                 <ul>
                     <!-- SLIDE 1 -->
                     <li data-index="rs-1" data-transition="random" data-slotamount="7" data-easein="default"
-                        data-easeout="default" data-masterspeed="1000" src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_1.jpg"
+                        data-easeout="default" data-masterspeed="1000" src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_1.jpg"
                         data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
                         data-saveperformance="off" data-title="Intro" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_1.jpg" data-bgparallax="10" alt=""
+                        <img src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_1.jpg" data-bgparallax="10" alt=""
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                              class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -78,11 +78,11 @@
 
                     <!-- SLIDE 2 -->
                     <li data-index="rs-2" data-transition="random" data-slotamount="7" data-easein="default"
-                        data-easeout="default" data-masterspeed="1000" src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_2.jpg"
+                        data-easeout="default" data-masterspeed="1000" src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_2.jpg"
                         data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
                         data-saveperformance="off" data-title="Intro" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_2.jpg" data-bgparallax="10" alt=""
+                        <img src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_2.jpg" data-bgparallax="10" alt=""
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                              class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -144,12 +144,12 @@
 
                     <!-- SLIDE 3 -->
                     <li data-index="rs-3" data-transition="random" data-slotamount="7" data-easein="default"
-                        data-easeout="default" data-masterspeed="1000" src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_3.jpg"
+                        data-easeout="default" data-masterspeed="1000" src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_3.jpg"
                         data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
                         data-saveperformance="off" data-title="Intro" data-description="">
 
                         <!-- MAIN IMAGE -->
-                        <img src="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/slider_3.jpg" data-bgparallax="10" alt=""
+                        <img src="http://nagelatelierdynamic.nl/wp-content/uploads/2017/03/slider_3.jpg" data-bgparallax="10" alt=""
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                              class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
