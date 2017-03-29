@@ -4,8 +4,8 @@
         <div class="section-title">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <h2 class="font-italic"><span><?php get_option('section_services_title', 'Our services');?></span></h2>
-                    <div class="subtitle-divider-2 text-center divider-service-2"><?php get_option('section_services_subtitle', '');?></div>
+                    <h2 class="font-italic"><span><?php echo get_option('section_services_title', 'Our services');?></span></h2>
+                    <div class="subtitle-divider-2 text-center divider-service-2"><?php echo get_option('section_services_subtitle', '');?></div>
                 </div>
             </div>
             <img class="img-absolute hidden-sm hidden-xs service-bg-image" alt="" src="<?php echo trailingslashit(get_template_directory_uri());?>images/service-bg.png">

@@ -81,7 +81,7 @@ add_action('admin_init', function () {
     register_setting('homepage', 'homepage_contact_form');
     register_setting('homepage', 'homepage_google_maps');
     register_setting('homepage', 'homepage_mailchimp_form');
-    
+
     add_settings_field('section_services_title', 'Services section title', function () {
         ?><input type="text" name="section_services_title" id="section_services_title" class="regular-text" value="<?php echo esc_attr(get_option('section_services_title'));?>" /> <?php
     }, 'theme-options', 'sections');

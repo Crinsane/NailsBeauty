@@ -4,8 +4,8 @@
         <div class="section-title">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center gallery-header">
-                    <h2 class="font-italic"><span><?php get_option('section_portfolio_title', 'Portfolio');?></span></h2>
-                    <div class="subtitle-divider-2 text-center"><?php get_option('section_portfolio_subtitle', '');?></div>
+                    <h2 class="font-italic"><span><?php echo get_option('section_portfolio_title', 'Portfolio');?></span></h2>
+                    <div class="subtitle-divider-2 text-center"><?php echo get_option('section_portfolio_subtitle', '');?></div>
                 </div>
             </div>
         </div>
