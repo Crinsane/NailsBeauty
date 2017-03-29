@@ -11,6 +11,7 @@ add_action('admin_menu', function () {
                 <?php
                 settings_fields('section');
                 settings_fields('homepage');
+                settings_fields('sections');
                 do_settings_sections('theme-options');
                 submit_button();
                 ?>
