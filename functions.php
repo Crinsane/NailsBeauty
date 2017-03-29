@@ -1,7 +1,8 @@
 <?php
 
 require_once __DIR__ . '/settings.php';
-require_once __DIR__ . '/post-type.php';
+require_once __DIR__ . '/service-post-type.php';
+require_once __DIR__ . '/portfolio-post-type.php';
 
 /**
  * Register styles

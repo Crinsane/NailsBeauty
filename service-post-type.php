@@ -1,7 +1,7 @@
 <?php
 
 add_action('init', function () {
-    $labels = array(
+    $labels = [
         'name'               => 'Behandelingen',
         'singular_name'      => 'Behandeling',
         'menu_name'          => 'Behandelingen',
@@ -16,7 +16,7 @@ add_action('init', function () {
         'parent_item_colon'  => 'Parent behandeling:',
         'not_found'          => 'Geen behandelingen gevonden',
         'not_found_in_trash' => 'Geen behandelingen gevonden in de prullenbak.',
-    );
+    ];
 
     $args = [
         'labels'             => $labels,
