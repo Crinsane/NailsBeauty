@@ -13,8 +13,8 @@
             <div class="pb-10">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-center gallery-header">
-                        <h2 class="font-italic font-Playfair-Display"><span>Portfolio</span></h2>
-                        <div class="subtitle-divider-2 text-center"></div>
+                        <h2 class="font-italic font-Playfair-Display"><span><?php echo get_option('section_portfolio_title', 'Portfolio');?></span></h2>
+                        <div class="subtitle-divider-2 text-center"><?php echo get_option('section_portfolio_subtitle', '');?></div>
                     </div>
                 </div>
             </div>

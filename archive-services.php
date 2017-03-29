@@ -13,8 +13,8 @@
           <div class="section-title">
               <div class="row">
                   <div class="col-md-6 col-md-offset-3 text-center">
-                      <h2 class="font-italic"><span>Our Services</span></h2>
-                      <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quasi! Beatae quidem modi mollitia explicabo.</p>
+                      <h2 class="font-italic"><span><?php echo get_option('section_services_title', 'Our services');?></span></h2>
+                      <p class="subtitle"><?php echo get_option('section_services_subtitle', '');?></p>
                       <div class="subtitle-divider-2 text-center divider-service-2"></div>
                   </div>
               </div>
