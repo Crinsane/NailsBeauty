@@ -23,14 +23,13 @@
 <div id="fb-root"></div>
 
 <div id="wrapper">
-    <!-- Header -->
     <header id="header" class="header">
         <div class="header-nav navbar-fixed-top navbar-colored navbar-transparent navbar-sticky-animated animated-active">
             <div class="header-nav-wrapper">
                 <div class="container">
                     <nav>
                         <div id="menuzord" class="menuzord no-bg">
-                            <a class="menuzord-brand" href="index.html"><img src="<?php echo trailingslashit(get_template_directory_uri());?>images/logo-wide.png" alt=""></a>
+                            <a class="menuzord-brand" href="<?php get_site_url();?>"><img src="<?php echo trailingslashit(get_template_directory_uri());?>images/logo-wide.png" alt=""></a>
                             <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'menuzord-menu pull-right']);?>
                         </div>
                     </nav>
