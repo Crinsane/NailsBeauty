@@ -36,6 +36,7 @@ img.aligncenter {
     margin-right: auto;
 }
 
-.breadcrumb-title-active {
+.breadcrumb-title-active,
+.contact-title {
     text-transform: uppercase;
 }
