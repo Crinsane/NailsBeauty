@@ -8,7 +8,7 @@
                     <div class="subtitle-divider-2 text-center divider-service-2"><?php echo get_option('section_services_subtitle', '');?></div>
                 </div>
             </div>
-            <img class="img-absolute hidden-sm hidden-xs service-bg-image" alt="" src="<?php echo trailingslashit(get_template_directory_uri());?>images/service-bg.png">
+            <img class="img-absolute hidden-sm hidden-xs service-bg-image" alt="" src="<?php echo get_option('section_newsletter_background');?>">
         </div>
         <div class="section-content">
             <div class="row">

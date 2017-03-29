@@ -115,12 +115,20 @@ add_action('admin_init', function () {
         ?><input type="text" name="section_contact_subtitle" id="section_contact_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_contact_subtitle'));?>" /> <?php
     }, 'theme-options', 'section');
 
-    add_settings_field('section_divider_background', 'Call-to-action section background', function () {
+    add_settings_field('section_divider_background', 'Divder section background', function () {
         ?><input type="text" name="section_divider_background" id="section_divider_background" class="regular-text" value="<?php echo esc_attr(get_option('section_divider_background'));?>" /> <?php
     }, 'theme-options', 'section');
 
-    add_settings_field('section_newsletter_background', 'Call-to-action section background', function () {
+    add_settings_field('section_newsletter_background', 'Newsletter section background', function () {
         ?><input type="text" name="section_newsletter_background" id="section_newsletter_background" class="regular-text" value="<?php echo esc_attr(get_option('section_newsletter_background'));?>" /> <?php
+    }, 'theme-options', 'section');
+
+    add_settings_field('section_contact_background', 'Contact section background', function () {
+        ?><input type="text" name="section_contact_background" id="section_contact_background" class="regular-text" value="<?php echo esc_attr(get_option('section_contact_background'));?>" /> <?php
+    }, 'theme-options', 'section');
+
+    add_settings_field('section_services_background', 'Services section background', function () {
+        ?><input type="text" name="section_services_background" id="section_services_background" class="regular-text" value="<?php echo esc_attr(get_option('section_services_background'));?>" /> <?php
     }, 'theme-options', 'section');
 
     register_setting('section', 'section_about_title');
@@ -133,4 +141,6 @@ add_action('admin_init', function () {
     register_setting('section', 'section_contact_subtitle');
     register_setting('section', 'section_divider_background');
     register_setting('section', 'section_newsletter_background');
+    register_setting('section', 'section_contact_background');
+    register_setting('section', 'section_services_background');
 });

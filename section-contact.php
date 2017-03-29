@@ -11,7 +11,7 @@
     <div class="section-content">
         <div class="container">
             <img class="img-absolute hidden-sm hidden-xs contact-bg-image" alt=""
-                 src="<?php echo trailingslashit(get_template_directory_uri());?>images/contact-image-bg.png">
+                 src="<?php echo get_option('section_contact_background');?>">
             <div class="row" style="padding: 20px; box-shadow: 0px 0px 6px 3px rgba(199,199,199,1);">
                 <div class="col-sm-12 col-md-6 p-0">
                     <div class="contact-wrapper pr-20 pl-20 pb-10 pt-10">
