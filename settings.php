@@ -23,6 +23,7 @@ add_action('admin_menu', function () {
 add_action('admin_init', function () {
     add_settings_section('section', 'All Settings', null, 'theme-options');
     add_settings_section('homepage', 'Homepage Settings', null, 'theme-options');
+    add_settings_section('sections', 'Sections Settings', null, 'theme-options');
 
     add_settings_field('facebook_url', 'Facebook', function () {
         ?><input type="text" name="facebook_url" id="facebook_url" class="regular-text" value="<?php echo esc_attr(get_option('facebook_url'));?>" /><?php
@@ -80,4 +81,35 @@ add_action('admin_init', function () {
     register_setting('homepage', 'homepage_contact_form');
     register_setting('homepage', 'homepage_google_maps');
     register_setting('homepage', 'homepage_mailchimp_form');
+    
+    add_settings_field('section_services_title', 'Services section title', function () {
+        ?><input type="text" name="section_services_title" id="section_services_title" class="regular-text" value="<?php echo esc_attr(get_option('section_services_title'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    add_settings_field('section_services_subtitle', 'Services section subtitle', function () {
+        ?><input type="text" name="section_services_subtitle" id="section_services_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_services_subtitle'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    add_settings_field('section_portfolio_title', 'Portfolio section title', function () {
+        ?><input type="text" name="section_portfolio_title" id="section_portfolio_title" class="regular-text" value="<?php echo esc_attr(get_option('section_portfolio_title'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    add_settings_field('section_portfolio_subtitle', 'Portfolio section subtitle', function () {
+        ?><input type="text" name="section_portfolio_subtitle" id="section_portfolio_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_portfolio_subtitle'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    add_settings_field('section_contact_title', 'Contact section title', function () {
+        ?><input type="text" name="section_contact_title" id="section_contact_title" class="regular-text" value="<?php echo esc_attr(get_option('section_contact_title'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    add_settings_field('section_contact_subtitle', 'Contact section subtitle', function () {
+        ?><input type="text" name="section_contact_subtitle" id="section_contact_subtitle" class="regular-text" value="<?php echo esc_attr(get_option('section_contact_subtitle'));?>" /> <?php
+    }, 'theme-options', 'sections');
+
+    register_setting('sections', 'section_services_title');
+    register_setting('sections', 'section_services_subtitle');
+    register_setting('sections', 'section_portfolio_title');
+    register_setting('sections', 'section_portfolio_subtitle');
+    register_setting('sections', 'section_contact_title');
+    register_setting('sections', 'section_contact_subtitle');
 });

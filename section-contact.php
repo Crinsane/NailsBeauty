@@ -3,8 +3,8 @@
     <div class="section-title">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
-                <h2 class="font-italic"><span>Contact US</span></h2>
-                <div class="subtitle-divider-2 text-center"></div>
+                <h2 class="font-italic"><span><?php get_option('section_contact_title', 'Contact US');?></span></h2>
+                <div class="subtitle-divider-2 text-center"><?php get_option('section_contact_subtitle', '');?></div>
             </div>
         </div>
     </div>
