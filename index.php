@@ -308,7 +308,7 @@
                         </div>
                     <?php
                         endwhile; endif;
-                    wp_reset_postdata();
+                        wp_reset_postdata();
                     ?>
                 </div>
             </div>
@@ -328,72 +328,27 @@
             </div>
             <div class="section-content">
                 <!-- protfolio items -->
-                <div class="megafolio-container" data-padding="15" data-layoutarray="[7]">
-                    <div class="mega-entry cat-all cat-print" id="mega-entry-2"
-                         data-src="http://placehold.it/400x600" data-width="504" data-height="700">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">what are the hottest nail polish colors right
-                                now?
+                <div class="megafolio-container" data-padding="15" data-layoutarray="[6]">
+                    <?php
+                    $servicesQuery = new WP_Query(['post_type' => 'portfolio']);
+
+                    if ($servicesQuery->have_posts()) : $i = 1; while ($servicesQuery->have_posts()) : $servicesQuery->the_post();
+                    ?>
+                        <div class="mega-entry cat-all cat-print" id="mega-entry-<?php echo $i;?>"
+                             data-src="<?php the_post_thumbnail_url();?>" data-width="504" data-height="700">
+                            <div class="mega-hover alone">
+                                <div class="mega-hovertitle text-white">what are the hottest nail polish colors right
+                                    now?
+                                </div>
+                                <a data-lightbox-gallery="gallery" href="<?php the_post_thumbnail_url();?>">
+                                    <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
+                                </a>
                             </div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_1_400x600.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
                         </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-print" id="mega-entry-15"
-                         data-src="http://placehold.it/460x350" data-width="504" data-height="400">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">Beauty that’s naturally you</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_2_460x350.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-branding" id="mega-entry-3"
-                         data-src="http://placehold.it/400x450" data-width="504" data-height="700">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">The future is in your feet</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_3_400x450.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-photoshop" id="mega-entry-4"
-                         data-src="http://placehold.it/460x460" data-width="504" data-height="250">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">Satisfying our clients</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_4_460x460.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-photography" id="mega-entry-5"
-                         data-src="http://placehold.it/460x460" data-width="504" data-height="400">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">how to fix every nail problem</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_5_460x460.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-print" id="mega-entry-6"
-                         data-src="http://placehold.it/450x300" data-width="504" data-height="250">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">Unwind. Body. Mind</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_6_450x300.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mega-entry cat-all cat-photoshop" id="mega-entry-7"
-                         data-src="http://placehold.it/400x600" data-width="504" data-height="700">
-                        <div class="mega-hover alone">
-                            <div class="mega-hovertitle text-white">embellished dark nail art</div>
-                            <a data-lightbox-gallery="gallery" href="images/gallery_7_400x600.jpg">
-                                <div class="mega-hoverview"><i class="pe-7s-search"></i></div>
-                            </a>
-                        </div>
-                    </div>
+                    <?php
+                        $i++; endwhile; endif;
+                        wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>
