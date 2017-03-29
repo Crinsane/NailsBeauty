@@ -1,6 +1,6 @@
 <!-- Section: Divider -->
 <section class="divider parallax layer-overlay text-left overflow-visible img-absolute-parent"
-         data-bg-img="http://themes.sumerianparadise.com/demo/html/nailsbeauty/images/home_page_book_now_bg.jpg" style="border-top: thick solid black;">
+         data-bg-img="<?php echo get_option('section_divider_background');?>" style="border-top: thick solid black;">
     <div class="container sm-text-center pt-30 pb-30">
         <div class="row">
             <div class="col-md-12 text-center">
