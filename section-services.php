@@ -23,7 +23,6 @@
                             <div class="p-30 pl-40 pr-40">
                                 <h4><a href="#" class="service-title"><?php the_title();?></a></h4>
                                 <p class="text-black"><?php the_content();?></p>
-                                <a href="<?php the_permalink();?>" class="btn btn-colored btn-text-black-hover-blue">READ MORE</a>
                             </div>
                         </div>
                     </div>
