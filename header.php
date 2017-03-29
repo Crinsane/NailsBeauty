@@ -29,7 +29,7 @@
                 <div class="container">
                     <nav>
                         <div id="menuzord" class="menuzord no-bg">
-                            <a class="menuzord-brand" href="<?php bloginfo('url');?>"><img src="<?php echo trailingslashit(get_template_directory_uri());?>images/logo-wide.png" alt=""></a>
+                            <a class="menuzord-brand" href="<?php bloginfo('url');?>"><img src="<?php echo get_option('logo');?>" alt="Logo"></a>
                             <?php wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'menuzord-menu pull-right']);?>
                         </div>
                     </nav>

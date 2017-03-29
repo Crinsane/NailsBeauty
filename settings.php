@@ -62,6 +62,12 @@ add_action('admin_init', function () {
     register_setting('section', 'pinterest_url');
     register_setting('section', 'instagram_url');
 
+    add_settings_field('logo', 'Logo', function () {
+        ?><input type="text" name="logo" id="logo" class="regular-text" value="<?php echo esc_attr(get_option('logo'));?>" /> <?php
+    }, 'theme-options', 'section');
+
+    register_setting('section', 'logo');
+
     add_settings_field('homepage_call_to_action', 'Call-to-action tekst', function () {
         ?><input type="text" name="homepage_call_to_action" id="homepage_call_to_action" class="regular-text" value="<?php echo esc_attr(get_option('homepage_call_to_action'));?>" /> <?php
     }, 'theme-options', 'section');
