@@ -40,3 +40,8 @@ img.aligncenter {
 .contact-title {
     text-transform: uppercase;
 }
+
+.footer-widget.widget_text .list-divider .footer-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
