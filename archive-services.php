@@ -24,7 +24,7 @@
                           <?php $boxColor = get_post_meta(get_the_ID(), '_box_color', true);?>
                           <div class="services-items overlay-<?php echo $boxColor;?> divider">
                               <div class="p-30 pl-40 pr-40">
-                                  <h4><a href="#" class="service-title"><?php the_title();?></a></h4>
+                                  <h4><a href="<?php the_permalink();?>" class="service-title"><?php the_title();?></a></h4>
                                   <p class="text-black"><?php the_content();?></p>
                               </div>
                           </div>
